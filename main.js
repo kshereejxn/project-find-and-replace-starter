@@ -16,13 +16,13 @@ replaceAllButton.addEventListener ("click", function(){
     var findText = findInput.value
     var replaceText = replaceInput.value
 
-    for (let rolodex = 0; rolodex < rowElements.length; rolodex += 1){
-        let rowIndex = getCellElements(rowElements[rolodex])
+    for (let innerText = 0; innerText < rowElements.length; innerText += 1){
+        let innerCells = getCellElements(rowElements[innerText])
     
-    for (let sectionIndex = 0; sectionIndex < rowIndex.length; sectionIndex += 1) {
+    for (let contentCells = 0; contentCells < innerCells.length; contentCells += 1) {
        
-        if (rowIndex[sectionIndex].rolodex.includes(findText)) {
-            rowIndex[sectionIndex].innerHTML = rowIndex[sectionIndex].innerHTML.replace(findText, replaceText)
+        if (innerCells[contentCells].innerText.includes(findText)) {
+            innerCells[contentCells].innerHTML = innerCells[contentCells].innerHTML.replace(findText, replaceText)
         }
     }
     }
